@@ -1,0 +1,175 @@
+﻿<html>
+<head>
+    <title>index of the css mini project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*-------main-header----*/
+        .main-header {
+            background-image: url(images/technology.jpg);
+            padding: 13px;
+            background-size: cover;
+            color: white;
+            text-align: right;
+        }
+        /*----main-navigation-bar----*/
+        .main-navigation-bar {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+            .main-navigation-bar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+                .main-navigation-bar ul li {
+                    float: left;
+                }
+                    .main-navigation-bar ul li a {
+                        text-decoration: none;
+                        color: white;
+                        padding: 15px 30px;
+                        display: inline-block;
+                        font-size: 18px;
+                    }
+                        .main-navigation-bar ul li a.active {
+                            background-color: #879272;
+                        }
+                        .main-navigation-bar ul li a:hover {
+                            background-color: #62c35a;
+                        }
+                        /*---contact---*/
+        body {
+            font-family: Arial, sans-serif;
+            background: white url(images/image5.jpeg);
+        }
+
+        .form-div {
+            background-color: rgba(16, 15, 15, 0.50);
+            width: 300px;
+            padding: 15px;
+            margin: 150px auto;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 15px #5ad15b;
+        }
+
+        .form_text {
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-size: 15px;
+            color: white;
+            background: transparent;
+             border-bottom: 2px solid #5ad15b;
+            text-align: center;
+        }
+        .form_area {
+            border: none;
+            outline: none;
+            padding: 8px;
+            font-size: 15px;
+            color: white;
+            background: transparent;
+            border: 2px solid #5ad15b;
+            text-align: center;
+        }
+        ::placeholder {
+            color: white;
+            font-size: 20px;
+        }
+
+        .form_text:focus {
+            border-bottom: 2px solid #ff99ad;
+        }
+        .form_area:focus {
+            border: 2px solid #ff99ad;
+        }
+        h2 {
+            margin-top: 70px;
+        }
+
+        .form-div img {
+            width: 100px;
+            height: 100px;
+            margin: -50px;
+        }
+
+        #form_submit {
+            border: none;
+            outline: none;
+            background-color: #5ad15b;
+            padding: 8px 50px;
+            margin-top: 15px;
+            font-size: 20px;
+            border-radius: 50px;
+            color: white;
+        }
+
+            #form_submit:hover {
+                background-color: #ff99ad;
+            }
+                        /*-----footer----*/
+        .footer {
+            background: linear-gradient(to right,#62c35a,black,#62c35a);
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+
+            .footer p {
+                font-size: 18px;
+                color: white;
+            }
+
+            .footer a {
+                text-decoration: none;
+                color: red;
+            }
+    </style>
+</head>
+<body>
+    <!--header in project-->
+    <div class="main-header">
+        <h1>UiBrains Techno Portal</h1>
+    </div>
+    <!--main-navigation-bar-->
+    <div class="main-navigation-bar">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="news.html"><i class="fa fa-newspaper-o"></i>News</a></li>
+            <li><a href="gallery.html"><i class="fa fa-image"></i> Gallary</a></li>
+            <li><a href="about.html"><i class="fa fa-id-card"></i>About-us</a></li>
+            <li><a href="contact.html" class="active"><i class="fa fa-envelope"></i>Contact-Us</a></li>
+        </ul>
+    </div>
+    <!-- contacts Form -->
+    <div class="form-div">
+        <img src="images/user.png" />
+        <h2>Login Here</h2>
+        <form>
+            <input type="text" placeholder="User Name" class="form_text">
+            <br>
+            <input type="password" placeholder="Password" class="form_text">
+            <br><br />
+            <textarea rows="3" cols="30" class="form_area"></textarea>
+            <br />
+            <input type="submit" value="Login" id="form_submit">
+        </form>
+    </div>
+    <!--footer of the page-->
+    <div class="footer">
+        <p>Copyright © 2018 , UiBrains Techno Portal</p>
+        <p>All Rigths Reserved</p>
+        <p>Developed & Maintained by<a href="https://github.com/subbumiriyala"> <i class="fa fa-user-circle"></i>supriya miriyala</a></p>
+    </div>
+</body>
+</html>

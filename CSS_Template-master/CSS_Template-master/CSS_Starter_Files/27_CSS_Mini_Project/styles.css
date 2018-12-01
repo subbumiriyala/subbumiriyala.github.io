@@ -1,0 +1,113 @@
+/* Add Your Styles Here */ body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*-------main-header----*/
+.main-header {
+    background-image: url(images/technology.jpg);
+    padding: 13px;
+    background-size: cover;
+    color: white;
+    text-align: right;
+}
+/*----main-navigation-bar----*/
+.main-navigation-bar {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+    .main-navigation-bar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+        .main-navigation-bar ul li {
+            float: left;
+        }
+
+            .main-navigation-bar ul li a {
+                text-decoration: none;
+                color: white;
+                padding: 15px 30px;
+                display: inline-block;
+                font-size: 18px;
+            }
+
+                .main-navigation-bar ul li a.active {
+                    background-color: #879272;
+                }
+
+                .main-navigation-bar ul li a:hover {
+                    background-color: #62c35a;
+                }
+/*---short news ----*/
+.short-news {
+    background-color: black;
+    margin: 10px auto auto auto;
+    color: white;
+    padding: 10px;
+    animation: animate 2s infinite linear;
+    overflow: hidden;
+}
+
+@keyframes animate {
+    0%,50%,100% {
+        background-color: #879272;
+    }
+
+    25%,75% {
+        background-color: black;
+    }
+}
+
+.short-news span {
+    color: orangered;
+}
+
+.short-news p {
+    animation: scroll 10s infinite linear;
+    margin: auto;
+    font-size: 18px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(100%);
+    }
+
+    100% {
+        transform: translate(-100%);
+    }
+}
+/*----laptop  images-news---*/
+.main-cellphone-news {
+    margin: auto auto auto 150px;
+    width: 1100px;
+}
+
+.news {
+    border: 2px solid black;
+    width: 300px;
+    float: left;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+    height: 500px;
+    transition: all 2s;
+}
+
+    .news img {
+        width: 100%;
+    }
+
+    .news:hover {
+        box-shadow: 0 0 15px black;
+        width: 320px;
+    }
+
+.brake {
+    clear: both;
+}
