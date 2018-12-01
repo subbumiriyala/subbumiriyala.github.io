@@ -1,0 +1,200 @@
+﻿<html>
+<head>
+    <title>index of the css mini project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../animate.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*-------main-header----*/
+        .main-header {
+            background-image: url(images/technology.jpg);
+            padding: 13px;
+            background-size: cover;
+            color: white;
+            text-align: right;
+        }
+        /*----main-navigation-bar----*/
+        .main-navigation-bar {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+            .main-navigation-bar ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+
+                .main-navigation-bar ul li {
+                    float: left;
+                }
+
+                    .main-navigation-bar ul li a {
+                        text-decoration: none;
+                        color: white;
+                        padding: 15px 30px;
+                        display: inline-block;
+                        font-size: 18px;
+                    }
+
+                        .main-navigation-bar ul li a.active {
+                            background-color: #879272;
+                        }
+
+                        .main-navigation-bar ul li a:hover {
+                            background-color: #62c35a;
+                        }
+                        /*---gallary images*/
+        .box {
+            width: 280px;
+            height: 230px;
+            border: 2px solid black;
+            text-align: center;
+            display: inline-block;
+            margin: 20px;
+            transition:all 1s;
+        }
+
+        .image {
+            width: 260px;
+            height: 180px;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+            .image img {
+                width: inherit;
+                height: inherit;
+                transition: all 1s;
+            }
+
+            .image:hover img {
+                transform: scale(1.4,1.4);
+            }
+
+        .name {
+            font-size: 20px;
+        }
+
+        .box:hover {
+            box-shadow: 0 0 15px black;
+        }
+        .footer {
+            background: linear-gradient(to right,#62c35a,black,#62c35a);
+            text-align: center;
+            color: white;
+            padding: 10px;
+        }
+
+            .footer p {
+                font-size: 18px;
+                color: white;
+            }
+
+            .footer a {
+                text-decoration: none;
+                color: red;
+            }
+    </style>
+</head>
+<body>
+    <!--header in project-->
+    <div class="main-header">
+        <h1>UiBrains Techno Portal</h1>
+    </div>
+    <!--main-navigation-bar-->
+    <div class="main-navigation-bar">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="news.html"><i class="fa fa-newspaper-o"></i>News</a></li>
+            <li><a href="gallery.html" class="active"><i class="fa fa-image"></i> Gallary</a></li>
+            <li><a href="about.html"><i class="fa fa-id-card"></i>About-us</a></li>
+            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact-Us</a></li>
+        </ul>
+    </div>
+    <!--gallary images of html-->
+    <div class="box animated rotateInUpLeft">
+        <div class="image">
+            <img src="images/gallery_mobile_1.jpg">
+        </div>
+        <div class="name">Mobil-1</div>
+    </div>
+    <div class="box animated rotateInUpRight">
+        <div class="image">
+            <img src="images/gallery_mobile_2.jpg">
+        </div>
+        <div class="name">Mobil-2</div>
+    </div>
+    <div class="box animated rotateInUpLeft ">
+        <div class="image">
+            <img src="images/gallery_mobile_3.jpg">
+        </div><div class="name">Mobil-3</div>
+    </div>
+    <div class="box animated rotateInUpRight">
+        <div class="image">
+            <img src="images/gallery_mobile_4.jpg">
+        </div>
+        <div class="name">Mobil-4</div>
+    </div>
+    <div class="box animated rotateInUpLeft">
+        <div class="image">
+            <img src="images/gallery_laptop_1.jpeg">
+        </div>
+        <div class="name">Laptup-1</div>
+    </div>
+    <div class="box animated rotateInUpRight">
+        <div class="image">
+            <img src="images/gallery_laptop_2.jpeg">
+        </div>
+        <div class="name">Laptup-2</div>
+    </div>
+    <div class="box animated rotateInUpLeft ">
+        <div class="image">
+            <img src="images/gallery_laptop_3.jpg">
+        </div>
+        <div class="name">Laptup-3</div>
+    </div>
+    <div class="box animated rotateInUpRight">
+        <div class="image">
+            <img src="images/gallery_laptop_4.jpg">
+        </div>
+        <div class="name">Laptup-4</div>
+    </div>
+    <div class="box animated rotateInUpLeft">
+        <div class="image">
+            <img src="images/gallery_tablet_1.jpg">
+        </div>
+        <div class="name">Tablet-1</div>
+    </div>
+    <div class="box animated rotateInUpRight">
+        <div class="image">
+            <img src="images/gallery_tablet_2.jpg">
+        </div>
+        <div class="name">Tablet-2</div>
+    </div>
+    <div class="box animated rotateInUpLeft">
+        <div class="image">
+            <img src="images/gallery_tablet_3.jpg">
+        </div>
+        <div class="name">Tablet-3</div>
+    </div>
+    <div class="box animated rotateInUpRight">
+        <div class="image">
+            <img src="images/gallery_tablet_4.jpg">
+        </div>
+        <div class="name">Tablet-4</div>
+    </div>
+    <!--footer of the page-->
+    <div class="footer">
+        <p>Copyright © 2018 , UiBrains Techno Portal</p>
+        <p>All Rigths Reserved</p>
+        <p>Developed & Maintained by<a href="https://github.com/subbumiriyala"> <i class="fa fa-user-circle"></i>supriya miriyala</a></p>
+    </div>
+</body>
+</html>

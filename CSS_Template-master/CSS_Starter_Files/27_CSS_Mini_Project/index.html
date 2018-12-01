@@ -1,0 +1,259 @@
+<html>
+<head>
+    <title>index of the css mini project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*-------main-header----*/
+    .main-header {
+        background-image: url(images/technology.jpg);
+        padding: 13px;
+        background-size: cover;
+        color: white;
+        text-align: right;
+    }
+    /*----main-navigation-bar----*/
+    .main-navigation-bar {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+        .main-navigation-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+            .main-navigation-bar ul li {
+                float: left;
+            }
+
+                .main-navigation-bar ul li a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 15px 30px;
+                    display: inline-block;
+                    font-size: 18px;
+                }
+
+                    .main-navigation-bar ul li a.active {
+                        background-color: #879272;
+                    }
+
+                    .main-navigation-bar ul li a:hover {
+                        background-color: #62c35a;
+                    }
+    /*---short news ----*/
+    .short-news {
+        background-color: black;
+        margin: 10px auto auto auto;
+        color: white;
+        padding: 10px;
+        animation: animate 2s infinite linear;
+        overflow: hidden;
+    }
+
+    @keyframes animate {
+        0%,50%,100% {
+            background-color: #879272;
+        }
+
+        25%,75% {
+            background-color: black;
+        }
+    }
+
+    .short-news span {
+        color: orangered;
+    }
+
+    .short-news p {
+        animation: scroll 10s infinite linear;
+        margin: auto;
+        font-size: 18px;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translate(100%);
+        }
+
+        100% {
+            transform: translate(-100%);
+        }
+    }
+    /*----laptop  images-news---*/
+    .main-cellphone-news {
+        margin: auto auto auto 150px;
+        width: 1100px;
+    }
+
+    .news {
+        border: 2px solid black;
+        width: 300px;
+        float: left;
+        margin: 20px;
+        text-align: center;
+        border-radius: 10px;
+        height: 500px;
+        transition: all 2s;
+    }
+
+        .news img {
+            width: 100%;
+        }
+
+        .news:hover {
+            box-shadow: 0 0 15px black;
+            width: 320px;
+        }
+    /*--brake tag---*/
+    .brake {
+        clear: both;
+    }
+    /*----images matter----*/
+    .images-matter {
+        margin: auto;
+    }
+
+    .images {
+        text-align: center;
+    }
+
+        .images h2 {
+            background: linear-gradient(to right,#62c35a,black,#62c35a);
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            width: 1120px;
+            margin: auto;
+            border-radius: 20px;
+        }
+
+        .images p {
+            width: 1120px;
+            font-size: 18px;
+            margin: 20px auto;
+        }
+
+    .home-img-zoom {
+        width: 600px;
+        height: 400px;
+        margin: 20px auto auto auto;
+        box-shadow: 0 0 15px black;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+        .home-img-zoom img {
+            width: inherit;
+            height: inherit;
+            transition: all 2s;
+        }
+
+        .home-img-zoom:hover img {
+            transform: scale(1.2,1.2);
+        }
+    /*---fotter of the page----*/
+    .footer {
+        background: linear-gradient(to right,#62c35a,black,#62c35a);
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+
+        .footer p {
+            font-size: 18px;
+            color: white;
+        }
+
+        .footer a {
+            text-decoration: none;
+            color: red;
+        }
+</style>
+
+<body>
+    <!--header in project-->
+    <div class="main-header">
+        <h1>UiBrains Techno Portal</h1>
+    </div>
+    <!--main-navigation-bar-->
+    <div class="main-navigation-bar">
+        <ul>
+            <li><a href="index.html"class="active"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="news.html"><i class="fa fa-newspaper-o"></i>News</a></li>
+            <li><a href="gallery.html"><i class="fa fa-image"></i> Gallary</a></li>
+            <li><a href="about.html"><i class="fa fa-id-card"></i>About-us</a></li>
+            <li><a href="contact.html"><i class="fa fa-envelope"></i>Contact-Us</a></li>
+        </ul>
+    </div>
+    <div class="short-news">
+        <p><span>Latest News :</span>
+            UiBrains Telegram Group Reached 1500+ Members</p>
+    </div>
+    <!--news-->
+    <section class="main-cellphone-news">
+        <!--cell-phone-news-->
+        <div class="news">
+        <h2>cellphone News</h2>
+        <img src="images/main_laptop.jpg" />
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores aspernatur debitis dicta ducimus est ex, inventore, itaque iusto minus modi nobis officia pariatur praesentium quam quasi rerum. Ea, provident?</p>
+    </div>
+        <!--mobil-news-->
+        <div class="news">
+            <h2>mobil News</h2>
+            <img src="images/main_mobile.JPG"/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores aspernatur debitis dicta ducimus est ex, inventore, itaque iusto minus modi nobis officia pariatur praesentium quam quasi rerum. Ea, provident?</p>
+        </div>
+        <!--laptop-news-->
+        <div class="news">
+            <h2>Laptop News</h2>
+            <img src="images/main_tablet.png" />
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores aspernatur debitis dicta ducimus est ex, inventore, itaque iusto minus modi nobis officia pariatur praesentium quam quasi rerum. Ea, provident?</p>
+        </div>
+    </section>
+    <div class="brake"></div>
+    <!--box images matter-->
+    <section class="images-matter">
+        <div class="images">
+        <h2>Lenovo 20GB RAM , 5TB HD Released</h2>
+        <div class="home-img-zoom">
+            <img src="images/article_laptop.jpg">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid, atque doloremque, dolores doloribus ducimus earum esse eveniet inventore ipsam magnam minima non, perspiciatis porro possimus quam qui quia repudiandae similique sit tempora ullam voluptatibus! Autem impedit labore natus sequi?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad deleniti dicta doloremque eaque ex exercitationem expedita facilis hic iste iusto magni minima nam nesciunt, obcaecati optio perferendis possimus quis quos reprehenderit soluta temporibus vero? Commodi, officiis voluptatem. Aut, molestiae.</p>
+        </div>
+        <div class="images">
+            <h2>Lenovo 20GB RAM , 5TB HD Released</h2>
+            <div class="home-img-zoom">
+                <img src="images/article_mobile.jpg">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid, atque doloremque, dolores doloribus ducimus earum esse eveniet inventore ipsam magnam minima non, perspiciatis porro possimus quam qui quia repudiandae similique sit tempora ullam voluptatibus! Autem impedit labore natus sequi?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad deleniti dicta doloremque eaque ex exercitationem expedita facilis hic iste iusto magni minima nam nesciunt, obcaecati optio perferendis possimus quis quos reprehenderit soluta temporibus vero? Commodi, officiis voluptatem. Aut, molestiae.</p>
+        </div>
+        <div class="images">
+            <h2>Lenovo 20GB RAM , 5TB HD Released</h2>
+            <div class="home-img-zoom">
+                <img src="images/article_tablet.jpg">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid, atque doloremque, dolores doloribus ducimus earum esse eveniet inventore ipsam magnam minima non, perspiciatis porro possimus quam qui quia repudiandae similique sit tempora ullam voluptatibus! Autem impedit labore natus sequi?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad deleniti dicta doloremque eaque ex exercitationem expedita facilis hic iste iusto magni minima nam nesciunt, obcaecati optio perferendis possimus quis quos reprehenderit soluta temporibus vero? Commodi, officiis voluptatem. Aut, molestiae.</p>
+        </div>
+    </section>
+    <!--footer of the page-->
+    <div class="footer">
+        <p>Copyright © 2018 , UiBrains Techno Portal</p>
+        <p>All Rigths Reserved</p>
+        <p>Developed & Maintained by<a href="https://github.com/subbumiriyala"> <i class="fa fa-user-circle"></i>supriya miriyala</a></p>
+    </div>
+</body>
+</html>

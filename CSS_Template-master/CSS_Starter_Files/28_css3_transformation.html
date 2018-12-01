@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>css3 transform</title>
+    <style>
+        section{
+            font-family:'Comic Sans MS'sans-serif;
+            background-color:lightcoral;
+            padding:10px;
+            margin:20px;
+            border-radius:10px;
+            box-shadow:0 0 15px black;
+            transition:all 0.5s;
+        }
+        article{
+            border:2px solid black;
+            display:inline-block;
+            width:300px;
+            margin:20px;
+            border-radius:10px;
+            background-color:yellow;
+            padding:10px;
+            box-shadow:0 0 15px black;
+        }
+            article:hover {
+                cursor: pointer;
+                /*transform: translate(-10px);*/
+                /*transform: perspective(500px) rotateY(20deg);*/
+                /*transform: perspective(500px) rotateY(20deg);*/
+                /*transform: rotate(180deg);*/
+                transform: perspective(500px) skewY(-20deg);
+            }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2>CSS3 Transformations</h2>
+        <article class="t_artical">
+            <p>fgskhjl;vdhjgo;klsdfgjek'jglekger';g' lkg'md;'gkn'lgk'dgl; ngd;klgflef jgd'sg;p gj'elk;kr ngkl;jre' ndlkgl' nkdglsj;k fgskhjl;vdhjgo;klsdfgjek'jglekger';g' lkg'md;'gkn'lgk'dgl; ngd;klgflef jgd'sg;p gj'elk;kr ngkl;jre' ndlkgl' nkdglsj;k</p>
+        </article>
+        <article class="t_artical">
+            <p>fgskhjl;vdhjgo;klsdfgjek'jglekger';g' lkg'md;'gkn'lgk'dgl; ngd;klgflef jgd'sg;p gj'elk;kr ngkl;jre' ndlkgl' nkdglsj;kfgskhjl;vdhjgo;klsdfgjek'jglekger';g' lkg'md;'gkn'lgk'dgl; ngd;klgflef jgd'sg;p gj'elk;kr ngkl;jre' ndlkgl' nkdglsj;k </p>
+        </article>
+        <article class="t_artical">
+            <p>fgskhjl;vdhjgo;klsdfgjek'jglekger';g' lkg'md;'gkn'lgk'dgl; ngd;klgflef jgd'sg;p gj'elk;kr ngkl;jre' ndlkgl' nkdglsj;k fgskhjl;vdhjgo;klsdfgjek'jglekger';g' lkg'md;'gkn'lgk'dgl; ngd;klgflef jgd'sg;p gj'elk;kr ngkl;jre' ndlkgl' nkdglsj;k</p>
+        </article>
+    </section>
+    </body>
+</html>
