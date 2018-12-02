@@ -1,0 +1,48 @@
+<html>
+<head>
+    <style>
+        div{
+            background-color:ghostwhite;
+            padding:20px;
+            color:red;
+            margin:60px;
+            width:100px;
+            outline:2px solid red;
+            border:2px solid green;
+            box-shadow:0 0 15px;
+            text-align:end;
+            float:left;
+            transform:perspective(100px)rotate(-25deg)skew(-25deg)translate(0,0);
+        }
+        div:hover{
+            transform:perspective(1000px)rotate(-25deg)skew(-25deg)translate(25px,-25px);
+        }
+        div::after{
+            left:1px;
+            top:-22px;
+            width:50px;
+            height:100%;
+            transform:rotate(0deg)skewY(-35deg);
+            content:"";
+            background-color:red;
+            position:absolute;
+            border:2px solid green;
+            outline:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<p>this a firast paragrafh</p>
+<p>this a second paragrafh</p>
+        </div>
+    <div>
+        <p>this a firast paragrafh</p>
+        <p>this a second paragrafh</p>
+    </div>
+    <div>
+        <p>this a firast paragrafh</p>
+        <p>this a second paragrafh</p>
+    </div>
+</body>
+</html>

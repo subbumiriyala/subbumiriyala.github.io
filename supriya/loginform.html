@@ -1,0 +1,434 @@
+<html>
+<head>
+    <title>animations</title>
+    <link rel="icon" href="images/1.jpg" />
+    <link rel="stylesheet" href="animate.css" />
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+       /*--header of the page--*/
+        .main-header {
+            background: linear-gradient(to right,#ff9933,white,#128807);
+            padding: 10px;
+            text-align: center;
+            color :#000088;
+            text-shadow: 0 0 15px pink;
+            animation: change 1s infinite linear;
+            position: relative;
+        }
+        @keyframes change{
+            0%,50% {
+                color: #ff9933;
+            }
+            25%,75%{
+                color:white;
+            }
+            100% {
+                color: #128807;
+            }
+        }
+        /*--main nav bar--*/
+        .main-nav{
+            background:url(images/background1.jpg)no-repeat fixed bottom;
+            background-size:cover;
+            margin:0;
+            padding:0;
+        }
+        .main-nav ul{
+            margin:0;
+            list-style-type:none;
+            overflow:hidden;
+            padding:0;
+        }
+        .main-nav ul li{
+            float:left;
+        }
+            .main-nav ul li a {
+                text-decoration: none;
+                padding: 15px 30px;
+                display: block;
+                font-size: 20px;
+                color:blue;
+            }
+                .main-nav ul li a:hover {
+                    background-color: #ff9933;
+                    color:white;
+                }
+                .active{
+                    background-color:green;
+                    color:white;
+                }
+                /*--breaking news--*/
+                .flash-news{
+                    width:900px;
+                    background-color:pink;
+                    box-shadow:0 0 15px pink;
+                    margin:20px auto auto auto;
+                    overflow:hidden;
+                    border-radius:40px;
+                    padding:0px;
+                }
+                    .flash-news h1 {
+                        animation: flash 10s infinite linear;
+                        color: black;
+                        padding:0;
+                        font-size:30px;
+                    }
+               @keyframes flash{
+                   0%{
+                       transform:translate(100%);
+                   }
+                   100%{
+                       transform:translate(-100%);
+                   }
+               }
+               /*--image explanation--*/
+        .images-exp {
+           margin:auto;
+        }
+        .image {
+            border: 2px solid pink;
+            float: left;
+            width: 250px;
+            height:400px;
+            margin: 20px 40px 20px 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 5s;
+        }
+        .image h1{
+            text-align:center;
+        }
+            .image img {
+                text-align:center;
+                background-size:cover;
+                width:230px;
+                padding:10px;
+                height:200px;
+                position:relative;
+                border-radius:20px;
+            }
+            .image p{
+                text-align:center;
+                font-size:15px;
+            }
+            .image:hover {
+            transform:scale(1.1,1.1);
+            box-shadow:0 0 25px pink;
+
+            }
+            /*---clear-both---*/
+            .clear{
+                clear:both;
+            }
+            /*---images in html----*/
+            .main-section{
+                border:2px solid black;
+                width:250px;
+                height:270px;
+                float:left;
+                margin:35px;
+                border-radius:10px;
+                transition:all 5s;
+            }
+        .image-class {
+            width: 230px;
+            height: 180px;
+            margin: 10px;
+            overflow: hidden;
+            border-radius:20px;
+        }
+            .image-class img{
+                width:inherit;
+                height:inherit;
+                text-align:center;
+                border-radius:20px;
+                transition:all 5s;
+                overflow:hidden;
+            }
+         .main-section h1{
+             text-align:center;
+             font-size:30px;
+         }
+         .main-section:hover{
+             box-shadow:0 0 15px black;
+         }
+         .image-class:hover img{
+             transform:scale(1.2,1.2);
+         }
+         /*---round-images----*/
+        .box {
+            width:300px;
+            height: 300px;
+            background-color: rgba(220, 5, 252, 0.10);
+            text-align: center;
+            box-shadow: 0 0 15px pink;
+            margin: 50px 50px 50px 50px;
+            float: left;
+            transition: all 2s;
+        }
+        .box:nth-child(even):hover{
+            transform:translate(25px,-25px);
+        }
+        .box:nth-child(odd):hover{
+            transform:translate(-25px,25px);
+        }
+         .box img{
+             width:100px;
+             height:100px;
+             border-radius:50px;
+             margin:-50px;
+             box-shadow:0 0 15px pink;
+         }
+         .box h1{
+            margin-top:50px;
+
+         }
+         /*----rotate boxes----*/
+         .flip{
+             width:250px;
+             height:300px;
+             margin:35px;
+             float:left;
+             text-align:center;
+         }
+         .flip>.front{
+             height:300px;
+             width:250px;
+             background-color:rgba(10, 10, 246, 0.10);
+             backface-visibility:hidden;
+             transform:perspective(600px)rotateY(0deg);
+             transition:transform .5s linear 0s;
+             position:absolute;
+             box-shadow:0 0 15px black;
+             border-radius:5px;
+             font-size:30px;
+         }
+            .flip > .back {
+                height:300px;
+                width: 250px;
+                background-color: rgba(10, 10, 246, 0.10);
+                backface-visibility: hidden;
+                transform: perspective(600px)rotateY(180deg);
+                transition: transform .5s linear 0s;
+                position:absolute;
+                box-shadow:0 0 15px black;
+                border-radius:5px;
+                font-size:30px;
+            }
+            .flip:hover>.front{
+                transform:perspective(600px)rotateY(-180deg);
+            }
+            .flip:hover>.back{
+                transform:perspective(600px)rotateY(0deg);
+            }
+    </style>
+</head>
+<body>
+  <!--header of the page-->
+    <div class="main-header">
+        <h1>MIRIYALA FnAMILY MEMBERS</h1>
+    </div>
+    <!--main nav bar-->
+    <div class="main-nav">
+        <ul>
+            <li><a href="#" class="active">Menu</a></li>
+            <li><a href="#">Html</a></li>
+            <li><a href="#">Css</a></li>
+            <li><a href="#">Java script</a></li>
+            <li><a href="#">Jquery</a></li>
+            <li><a href="#">Bootstrap</a></li>
+        </ul>
+    </div>
+    <!--flash news-->
+    <div class="flash-news">
+        <h1>All are happy</h1>
+    </div>
+    <!--images explanation-->
+    <div class="images-exp">
+        <div class="image animated bounceInUp">
+            <h1>Hero 1</h1>
+            <img src="images/hero1.jpg" />
+            <p>Heros is a hd;alkhd;akll hda;ljkd kalsjd kjalj kjsaflk jklfl skjf;L FHSKJAL/ JKLSFJAS ASKJ; HSFKj;l</p>
+        </div>
+        <div class="image animated bounceInUp">
+            <h1>Hero 2</h1>
+            <img src="images/hero2.jpg" />
+            <p>Heros is a hd;alkhd;akll hda;ljkd kalsjd kjalj kjsaflk jklfl skjf;L FHSKJAL/ JKLSFJAS ASKJ; HSFKj;l</p>
+        </div>
+        <div class="image animated bounceInUp">
+            <h1>Hero 3</h1>
+            <img src="images/hero8.jpg" />
+            <p>Heros is a hd;alkhd;akll hda;ljkd kalsjd kjalj kjsaflk jklfl skjf;L FHSKJAL/ JKLSFJAS ASKJ; HSFKj;l</p>
+        </div>
+        <div class="image animated bounceInUp">
+            <h1>Hero 4</h1>
+            <img src="images/hero4.jpg" />
+            <p>Heros is a hd;alkhd;akll hda;ljkd kalsjd kjalj kjsaflk jklfl skjf;L FHSKJAL/ JKLSFJAS ASKJ; HSFKj;l</p>
+        </div>
+    </div>
+    <!--div clear both-->
+    <div class="clear"></div>
+    <!--images in html-->
+    <div class="main-section animated rotateInUpLeft">
+        <div class="image-class">
+            <img src="images/heroen1.jpg" />
+        </div>
+        <h1>images1</h1>
+    </div>
+    <div class="main-section animated rotateInUpRight">
+        <div class="image-class">
+            <img src="images/heroen2.jpg" />
+        </div>
+        <h1>images2</h1>
+    </div>
+    <div class="main-section animated rotateInUpLeft">
+        <div class="image-class">
+            <img src="images/heroen3.jpg" />
+        </div>
+        <h1>images3</h1>
+    </div>
+    <div class="main-section animated rotateInUpRight">
+        <div class="image-class">
+            <img src="images/heroen4.jpg" />
+        </div>
+        <h1>images4</h1>
+    </div>
+    <div class="main-section animated rotateInUpLeft">
+        <div class="image-class">
+            <img src="images/heroen1.jpg" />
+        </div>
+        <h1>images1</h1>
+    </div>
+    <div class="main-section animated rotateInUpRight">
+        <div class="image-class">
+            <img src="images/heroen2.jpg" />
+        </div>
+        <h1>images2</h1>
+    </div>
+    <div class="main-section animated rotateInUpLeft">
+        <div class="image-class">
+            <img src="images/heroen3.jpg" />
+        </div>
+        <h1>images3</h1>
+    </div>
+    <div class="main-section animated rotateInUpRight">
+        <div class="image-class">
+            <img src="images/heroen4.jpg" />
+        </div>
+        <h1>images4</h1>
+    </div>
+    <div class="main-section animated rotateInUpLeft">
+        <div class="image-class">
+            <img src="images/heroen1.jpg" />
+        </div>
+        <h1>images1</h1>
+    </div>
+    <div class="main-section animated rotateInUpRight">
+        <div class="image-class">
+            <img src="images/heroen2.jpg" />
+        </div>
+        <h1>images2</h1>
+    </div>
+    <div class="main-section animated rotateInUpLeft">
+        <div class="image-class">
+            <img src="images/heroen3.jpg" />
+        </div>
+        <h1>images3</h1>
+    </div>
+    <div class="main-section animated rotateInUpRight">
+        <div class="image-class">
+            <img src="images/heroen4.jpg" />
+        </div>
+        <h1>images4</h1>
+    </div>
+  
+    <!--rounded box images-->
+    <div class="clear"></div>
+    <div class="box">
+        <img src="images/comee1.jpg" />
+        <h1>login form</h1>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+    </div>
+    <div class="box">
+        <img src="images/comee2.jpg" />
+        <h1>login form</h1>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+    </div>
+    <div class="box">
+        <img src="images/comee3.jpg" />
+        <h1>login form</h1>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+    </div>
+    <div class="box">
+        <img src="images/comee4.jpg" />
+        <h1>login form</h1>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+    </div>
+    <div class="box">
+        <img src="images/comee1.jpg" />
+        <h1>login form</h1>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+    </div>
+    <div class="box">
+        <img src="images/comee3.jpg" />
+        <h1>login form</h1>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+        <p>this a paragrafh of the page</p>
+    </div>
+    <div class="clear"></div>
+    <!--rotate page in html-->
+    <div class="flip">
+        <div class="back">front</div>
+        <div class="front">back</div>
+    </div>
+    <div class="flip">
+        <div class="back">front</div>
+        <div class="front">back</div>
+    </div>
+    <div class="flip">
+        <div class="back">front</div>
+        <div class="front">back</div>
+    </div>
+    <div class="flip">
+        <div class="back">front</div>
+        <div class="front">back</div>
+    </div>
+    <!--footer of the page-->
+    <div class="footer">
+        <h1>Footer of the page</h1>
+        <h2>Ui devel</h2>
+    </div>
+</body>
+</html>

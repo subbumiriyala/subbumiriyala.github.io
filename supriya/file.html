@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title></title>
+    <style>
+    .flip{
+        width:400px;
+        height:400px;
+
+    }
+        .flip>.front {
+            position: absolute;
+            backface-visibility: hidden;
+            width: 240px;
+            height: 240px;
+            background-color: red;
+            transform: perspective(600px)rotateY(0deg);
+            transition: transform .5s linear 0s;
+        }
+        .flip>.back {
+            backface-visibility: hidden;
+            width: 240px;
+            height: 240px;
+            background-color: red;
+            transform: perspective(600px)rotateY(180deg);
+            position: absolute;
+            transition: transform .5s linear 0s;
+        }
+        .flip:hover>.front{
+            transform:perspective(600px) rotateY(-180deg);
+        }
+        .flip:hover>.back{
+            transform:perspective(600px)rotateY(0deg);
+        }
+        .dropdown{
+            position:relative;
+            display:inline-block;
+        }
+        .dropdown-content{
+            position:absolute;
+            display:none;
+            z-index:1;
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <div class="flip">
+        <div class="back">back</div>
+        <div class="front">front</div>
+    </div>
+    <div class="dropdown">class
+        <div class="dropdown-content">class</div>
+    </div>
+</body>
+</html>
