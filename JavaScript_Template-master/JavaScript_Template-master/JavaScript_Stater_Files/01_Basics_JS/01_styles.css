@@ -1,0 +1,41 @@
+body{
+    font-family: "Comic Sans MS", sans-serif;
+    margin: 0;
+}
+
+h2{
+    background-color: lightsalmon;
+    text-align: center;
+    padding: 5px;
+    font-size: 30px;
+    box-shadow: 0 0 15px black;
+    border-radius: 50px;
+}
+
+div{
+    background-color: orange;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px black;
+    border-radius: 50px;
+}
+section{
+    border:2px solid black;
+    width:200px;
+    text-align:center;
+    margin:100px auto;
+    background-image:url("../forest.jpg");
+    color:white;
+    padding:10px;
+    font-size:30px;
+    box-shadow:0 0 15px black;
+}
+section h1{
+    margin:0;
+    font-family:'Old English Text MT'sans-serif;
+    font-size:60px;
+    box-shadow:0 0 15px red;
+}
+section h1{
+    margin:0;
+}

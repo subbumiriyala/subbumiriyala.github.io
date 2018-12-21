@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM Manipulation</title>
+    <link rel="stylesheet" href="11_styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Comic Sans MS",sans-serif;
+        }
+
+        h2 {
+            background-color: lightsalmon;
+            text-align: center;
+            padding: 10px;
+        }
+
+        form {
+            background-color: lightgray;
+            width: 400px;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        #span {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JS DOM Manipulation</h2>
+    <form>
+        <label>User Name</label>
+        <input type="text" id="user" onkeyup="getMessage()">
+        <button type="button">Click</button>
+        <h3 id="msg"></h3>
+    </form>
+
+    <br>
+    <form>
+        <h3>SMS App</h3>
+        <textarea id="text-area" rows="5" cols="30" onkeyup="prepareMsg()" maxlength="100"></textarea>
+        <h3>The Characters Remaining <span id="span">100</span> </h3>
+    </form>
+    <script>
+        var inputField = document.querySelector('#user');
+        var h3Element = document.querySelector('#msg');
+        function getMessage() {
+            var userName = inputField.value;
+            h3Element.textContent = reverseString(userName);
+            if (userName === 'naveen') {
+                inputField.style.backgroundColor = 'lightgreen';
+                inputField.style.borderColor = 'green';
+                inputField.style.boxShadow = '0 0 15px green';
+                h3Element.style.color = 'green';
+            }
+            else {
+                inputField.style.backgroundColor = 'lightsalmon';
+                inputField.style.borderColor = 'red';
+                inputField.style.boxShadow = '0 0 15px red';
+                h3Element.style.color = 'red';
+            }
+        }
+
+        function reverseString(str) {
+            var tempStr = '';
+            for (var i = str.length - 1; i >= 0; i--) {
+                tempStr += str.charAt(i);
+            }
+            return tempStr;
+        }
+
+        // SMS App
+        var textAreaElement = document.querySelector('#text-area');
+        var spanElement = document.querySelector('#span');
+        var textLimit = 100;
+        function prepareMsg() {
+            var textEnteredLength = textAreaElement.value.length;
+            spanElement.textContent = textLimit - textEnteredLength;
+        }
+    </script>
+<script src="11_script.js"></script>
+</body>
+</html>

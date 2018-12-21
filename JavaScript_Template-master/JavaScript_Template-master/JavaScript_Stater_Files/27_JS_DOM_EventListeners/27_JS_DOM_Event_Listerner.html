@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS DOM</title>
+    <link rel="stylesheet" href="27_styles.css">
+</head>
+<body>
+
+    <!-- Triangle One -->
+    <section>
+        <h2>Triangle One</h2>
+        <form>
+            <input type="text" id="triangleOne">
+            <pre id="triangleOneText"></pre>
+        </form>
+        <br />
+        <form>
+            <input type="text" id="triangletwo">
+            <pre id="triangletwoText"></pre>
+        </form>
+        <br />
+        <form>
+            <input type="text" id="trianglethree">
+            <pre id="trianglethreeText"></pre>
+        </form>
+    </section>
+    <script> 
+        function triangleOne(str) {
+            var tempStr = '';
+            for (var i = 0; i < str.length; i++) {
+                tempStr += str.substr(0, i + 1) + '\n';
+            }
+            return tempStr;
+        }
+
+        function triangleTwo(str) {
+            var tempStr = '';
+            for (var i = 0; i <= str.length - 1; i++) {
+                tempStr += addSpace(i) + str.substr(i) + '\n';
+            }
+            return tempStr;
+        }
+
+        function addSpace(number) {
+            var tempSpace = '';
+            for (var i = 0; i < number; i++) {
+                tempSpace += ' ';
+            }
+            return tempSpace;
+        }
+
+        function triangleThree(str) {
+            var tempStr = '';
+            for (var i = str.length; i > 0; i--) {
+                tempStr += str.substr(0, i) + '\n';
+            }
+            return tempStr;
+        }
+        // Triangle One
+        var textBoxOne = document.querySelector('#triangleOne');
+        var displayTextOne = document.querySelector('#triangleOneText');
+        textBoxOne.addEventListener('keyup', function () {
+            var textEntered = textBoxOne.value;
+            displayTextOne.textContent = triangleOne(textEntered);
+        });
+        var textBoxTwo = document.querySelector('#triangletwo');
+        var displayTextTwo = document.querySelector('#triangletwoText');
+        textBoxTwo.addEventListener('keyup', function () {
+            var textEntered = textBoxTwo.value;
+            displayTextTwo.textContent = triangleTwo(textEntered);
+        });
+        var textBoxThree = document.querySelector('#trianglethree');
+        var displayTextThree = document.querySelector('#trianglethreeText');
+        textBoxThree.addEventListener('keyup', function () {
+            var textEntered = textBoxThree.value;
+            displayTextThree.textContent = triangleThree(textEntered);
+        });
+    </script>
+</body>
+</html>

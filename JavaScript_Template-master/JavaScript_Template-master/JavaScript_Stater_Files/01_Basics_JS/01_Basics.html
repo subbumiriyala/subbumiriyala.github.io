@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Basics</title>
+    <link rel="stylesheet" href="01_styles.css">
+    <script>
+        //Alert Box
+        //alert('Welcome to JS');
+        // confirm Box
+        //confirm('Good Morning JS');
+        //console log
+        console.log('good morning javascript');
+        //Display date on the console
+        var date = new Date().toLocaleDateString();
+        console.log(date);
+        // Display date on the web page using DOM
+        document.querySelector('#display').textContent = date;
+        //dispaly corrent time
+        var time = new Date().toLocaleDateString();
+        document.querySelector('#display').textContent = time;
+        //digital clock
+        function digitalclock() {
+            var time = new Date().toLocaleDateString();
+            document.querySelector('#time').textContent = time;
+        }
+        setInterval(digitalclock, 1000); 
+    </script>
+</head>
+
+<body>
+
+    <h2>JavaScript Basics</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+    <!--digital clock-->
+    <section>
+        <h3>INDIA</h3>
+        <h1 id="time"></h1>
+    </section>
+<script src="01_script.js"></script>
+</body>
+</html>
