@@ -95,7 +95,6 @@ function changeBorder(color) {
 function startTimer() {
     minutes = Math.floor((timer/100)/60);
     seconds = Math.floor((timer/100) - (minutes * 60));
-
     minutesElement.textContent = leadingZero(minutes).toString();
     secondsElement.textContent = leadingZero(seconds).toString();
     timer++;

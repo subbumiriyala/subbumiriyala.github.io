@@ -23,6 +23,51 @@ map.entries() – returns the entries [key, value], it’s used by default in fo
 
  */
 
+// Map Creation
+let technologies = new Map();
+technologies.set(1,'HTML');
+technologies.set(2,'CSS');
+technologies.set(3,'JavaScript');
+technologies.set(4,'JQuery');
+technologies.set(5,'AJAX');
+technologies.set(6,'Bootstrap');
+
+console.log(technologies);
+
+let js = technologies.get(3);
+console.log(js);
+
+let hasFive = technologies.has(5);
+console.log(`hasFive : ${hasFive}`);
+
+// delete a key
+technologies.delete(1);
+console.log(technologies);
+
+// Size of Map
+console.log(`Size is : ${technologies.size}`);
+
+// get all the keys
+let output = '';
+for(let key of technologies.keys()){
+    output += `${key} `;
+}
+console.log(output);
+
+// get all the values
+output = '';
+for(let value of technologies.values()){
+    output += `${value} `;
+}
+console.log(output);
+
+// Get all entries
+output = '';
+for(let entry of technologies.entries()){
+    output += `${entry[0]} => ${entry[1]} \n`;
+}
+console.log(output);
+
 /*
 ---------------------------------------------------------------------------------
                                 Set Collection in ECMAScript
@@ -42,3 +87,41 @@ set.clear() – removes everything from the set.
 set.size – is the elements count.
 
  */
+
+// Create a Set
+let languages = new Set();
+languages.add('HTML');
+languages.add('CSS');
+languages.add('JavaScript');
+languages.add('JQuery');
+languages.add('Bootstrap');
+
+console.log(languages);
+
+let hasHTML = languages.has('HTML');
+console.log(`hasHTML ? ${hasHTML}`);
+
+// Size
+console.log(`Size : ${languages.size}`);
+
+// Clear the Set
+languages.clear();
+console.log(languages);
+
+// Exception Handling
+try {
+    // problematic code
+    console.log(employee);
+}
+catch (exception) {
+    // handling Logic
+    console.log('Employee Not Found ');
+}
+finally {
+    // final Logic
+    console.log('Iam From Finally');
+}
+console.log('got Employee');
+
+
+
