@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Act Service App</title>
+    <link rel="stylesheet" href="../public/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="../public/stylesheets/mdb.css">
+    <link rel="stylesheet" href="../public/stylesheets/styles.css">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-success">
+      <a class="navbar-brand" href="#">ACT Service App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/raise">Raise a Complaint</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/complaints">Complaints</a>
+              </li>
+          </ul>
+
+      </div>
+  </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header text-center bg-dark text-white">
+                        <h3>Raise a Request</h3>
+                    </div>
+                    <div class="card-body bg-success">
+                        <form action="/raise" method="post">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="username" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" placeholder="Your Email">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control" name="issue">
+                                    <option value="Issue with Router">Issue with Router</option>
+                                    <option value="Slow Speed">Slow Speed</option>
+                                    <option value="Issue with Payment">Issue with Payment</option>
+                                    <option value="Poor Service">Poor Service</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="issueDesc" rows="4" placeholder="Your Issue Description"></textarea>
+                            </div>
+                            <input type="submit" value="Send" class="btn btn-outline-white">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <script src="../public/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="../public/javascripts/popper.min.js"></script>
+    <script src="../public/javascripts/bootstrap.js"></script>
+    <script src="../public/javascripts/mdb.js"></script>
+  </body>
+</html>

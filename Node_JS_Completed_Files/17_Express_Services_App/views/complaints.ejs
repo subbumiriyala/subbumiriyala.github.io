@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Act Service App</title>
+    <link rel="stylesheet" href="../public/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="../public/stylesheets/mdb.css">
+    <link rel="stylesheet" href="../public/stylesheets/styles.css">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-success">
+      <a class="navbar-brand" href="#">ACT Service App</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/raise">Raise a Complaint</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/complaints">Complaints</a>
+              </li>
+          </ul>
+
+      </div>
+  </nav>
+
+    <!-- List of Complaints -->
+    <section class="mt-3 text-center table-hover">
+        <h2 class="text-primary">Complaints List</h2>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque corporis doloribus excepturi expedita, hic inventore libero modi molestiae odit quas quia sequi similique sunt ullam velit vero voluptatum. Ab adipisci aliquam eligendi est, exercitationem facilis fugiat maxime nihil nulla obcaecati?</p>
+        <div class="container">
+            <table class="table">
+                <thead class="bg-primary text-white">
+                    <tr>
+                        <th>SNO</th>
+                        <th>NAME</th>
+                        <th>EMAIL</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% complaints.forEach((complaint) => { %>
+                    <tr>
+                        <td><%= complaint._id %></td>
+                        <td><%= complaint.username %></td>
+                        <td><%= complaint.email %></td>
+                        <td><%= complaint.issue %></td>
+                    </tr>
+                    <% });%>
+                </tbody>
+            </table>
+        </div>
+    </section>
+  
+  <script src="../public/javascripts/jquery-3.2.1.min.js"></script>
+    <script src="../public/javascripts/popper.min.js"></script>
+    <script src="../public/javascripts/bootstrap.js"></script>
+    <script src="../public/javascripts/mdb.js"></script>
+  </body>
+</html>
